@@ -1,7 +1,7 @@
 Flask
 pandas
 openpyxl
+msoffcrypto-python
 lxml
 beautifulsoup4
 gunicorn
-msoffcrypto-python==5.1.0
