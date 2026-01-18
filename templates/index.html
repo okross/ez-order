@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>蝦皮訂單自動整理工具</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #f7f7f7; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { color: #ee4d2d; text-align: center; margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #555; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        .btn { background-color: #ee4d2d; color: white; border: none; width: 100%; padding: 15px; border-radius: 6px; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background-color: #d73211; }
+        .hint { font-size: 12px; color: #888; margin-top: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>蝦皮訂單轉檔</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>使用授權碼</label>
+                <input type="text" name="password" placeholder="請輸入密碼" required>
+            </div>
+            <div class="form-group">
+                <label>上傳 Excel 檔</label>
+                <input type="file" name="file" accept=".xlsx, .xls" required>
+            </div>
+            <button type="submit" class="btn">立即轉換並下載</button>
+        </form>
+        <div class="hint">系統會自動過濾重複訂單與無包裹號碼之行數</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Flask
+pandas
+openpyxl
+msoffcrypto-python
+lxml
+beautifulsoup4
+html5lib
